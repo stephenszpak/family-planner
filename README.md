@@ -16,7 +16,17 @@ host: family-planner-db.c5e0yiaee08r.us-east-2.rds.amazonaws.com
 port: 5432
 ```
 
+
+Create a `.env` file with your database settings before running the backend. You can start by copying the provided example:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` and set `DB_USER`, `DB_PASSWORD`, `DB_NAME`, and any other values as needed.
+
 Set the `DB_USER`, `DB_PASSWORD`, and `DB_NAME` environment variables to match your database credentials before running the backend.
+
 
 ### Running the Backend
 Install dependencies:

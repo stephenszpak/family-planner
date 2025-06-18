@@ -35,6 +35,8 @@ Install dependencies:
 pip install -r backend/requirements.txt
 ```
 
+This installs FastAPI along with `email-validator`, which is required for Pydantic's `EmailStr` type used in the API models.
+
 Start the server:
 
 ```bash

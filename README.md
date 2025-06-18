@@ -6,13 +6,13 @@ This repository contains a simple iOS Swift package and a Python backend for a f
 The Swift package in this repo is a minimal starting point for a future iOS app. You can build it with `swift build`.
 
 ## Backend
-The Python backend uses FastAPI and connects to a Postgres database hosted on AWS RDS.
+The Python backend uses FastAPI and connects to a Postgres database hosted on Render.com.
 
 ### Database Configuration
 The database connection defaults to the following host and port:
 
 ```
-host: family-planner-db.c5e0yiaee08r.us-east-2.rds.amazonaws.com
+host: dpg-d19bsdadbo4c73d56f2g-a
 port: 5432
 ```
 

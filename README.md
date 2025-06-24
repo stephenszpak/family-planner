@@ -3,7 +3,7 @@
 This repository contains a simple iOS Swift package and a Python backend for a family planner application.
 
 ## iOS App
-The Swift package in this repo is a minimal starting point for a future iOS app. You can build it with `swift build`.
+The Swift package in this repo is a minimal starting point for a future iOS app. After logging in, the app now presents a basic home dashboard with placeholder widgets for a calendar and a task list. You can build it with `swift build`.
 
 ## Backend
 The Python backend uses FastAPI and connects to a Postgres database hosted on Render.com.

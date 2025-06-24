@@ -39,11 +39,55 @@ struct LoggedInView: View {
     let logoutAction: () -> Void
 
     var body: some View {
-        VStack {
-            Text("Logged in")
-            Button("Logout", action: logoutAction)
+        DashboardView(logoutAction: logoutAction)
+    }
+}
+
+struct DashboardView: View {
+    let logoutAction: () -> Void
+
+    var body: some View {
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 20) {
+                    CalendarWidget()
+                    TaskListWidget()
+                }
+                .padding()
+            }
+            .navigationTitle("Home")
+            .toolbar {
+                Button("Logout", action: logoutAction)
+            }
         }
-        .padding()
+    }
+}
+
+struct CalendarWidget: View {
+    var body: some View {
+        GroupBox(label: Label("Calendar", systemImage: "calendar")) {
+            Rectangle()
+                .fill(Color.gray.opacity(0.2))
+                .frame(height: 200)
+                .overlay(
+                    Text("Calendar coming soon")
+                        .foregroundColor(.secondary)
+                )
+        }
+    }
+}
+
+struct TaskListWidget: View {
+    var body: some View {
+        GroupBox(label: Label("Tasks", systemImage: "checklist")) {
+            Rectangle()
+                .fill(Color.gray.opacity(0.2))
+                .frame(height: 200)
+                .overlay(
+                    Text("Task list coming soon")
+                        .foregroundColor(.secondary)
+                )
+        }
     }
 }
 

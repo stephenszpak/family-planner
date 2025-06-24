@@ -111,15 +111,21 @@ struct AuthView: View {
 
             if !isLogin {
                 TextField("Username", text: $username)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
                     .textFieldStyle(.roundedBorder)
                     .padding([.horizontal])
             }
 
             TextField("Email", text: $email)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled(true)
                 .textFieldStyle(.roundedBorder)
                 .padding([.horizontal])
 
             SecureField("Password", text: $password)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled(true)
                 .textFieldStyle(.roundedBorder)
                 .padding([.horizontal])
 
